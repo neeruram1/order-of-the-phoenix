@@ -8,6 +8,8 @@ class SearchController < ApplicationController
 
     response = conn.get("characters?orderOfThePhoenix=true&house=#{house}")
     results = JSON.parse(response.body, symbolize_names: true)
-    @members = results
+    @characters = results.map do |character_data|
+      Character.new(character_data)
+    end
   end
 end
