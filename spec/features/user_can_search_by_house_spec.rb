@@ -13,7 +13,7 @@ feature "User can search for Order of the Phoenix members by House" do
 
     expect(page).to have_content("21 Results")
 
-    within(first(".character")) do
+    within(first(".members")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".role")
       expect(page).to have_css(".house")

@@ -1,4 +1,4 @@
-class Character
+class Member
   attr_reader :name,
               :role,
               :house,
