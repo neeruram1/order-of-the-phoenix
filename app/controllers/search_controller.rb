@@ -7,6 +7,7 @@ class SearchController < ApplicationController
     end
 
     response = conn.get("characters?orderOfThePhoenix=true&house=#{house}")
-    binding.pry
+    results = JSON.parse(response.body, symbolize_names: true)
+    @members = results
   end
 end
