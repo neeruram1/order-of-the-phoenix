@@ -7,7 +7,7 @@ class Character
   def initialize(attributes)
     @name       = attributes[:name]
     @role       = attributes[:role]
-    @party      = attributes[:house]
-    @district   = attributes[:patronus]
+    @house      = attributes[:house]
+    @patronus   = attributes[:patronus]
   end
 end
