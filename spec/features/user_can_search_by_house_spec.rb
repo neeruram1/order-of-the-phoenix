@@ -11,7 +11,7 @@ feature "User can search for Order of the Phoenix members by House" do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content("21 Results")
+    expect(page).to have_content("21 Order of the Phoenix Members")
 
     expect(page).to have_css(".name")
     expect(page).to have_css(".role")

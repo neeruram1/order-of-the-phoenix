@@ -1,4 +1,4 @@
-<h1><%= @members.count %> Results</h1>
+<h1><%= @members.count %> Order of the Phoenix Members</h1>
 <% @members.each do |member| %>
   <ul class="members">
     <li class="name"><b>Name:</b> <%= member.name %></li>
@@ -10,6 +10,6 @@
     <% if member.has_patronus? %>
       <li class="patronus"><b>Patronus:</b> <%= member.patronus %></li>
     <% end %>
-    
+
   </ul>
 <% end %>
