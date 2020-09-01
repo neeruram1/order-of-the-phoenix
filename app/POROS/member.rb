@@ -10,4 +10,12 @@ class Member
     @house      = attributes[:house]
     @patronus   = attributes[:patronus]
   end
+
+  def has_role?
+    @role.nil? == false
+  end
+
+  def has_patronus?
+    @patronus.nil? == false
+  end
 end

@@ -17,4 +17,26 @@ describe Member do
     expect(member.house).to eq("Gryffindor")
     expect(member.patronus).to eq("goat")
   end
+
+  it ".has_role?" do
+    attrs = {
+      name: "Aberforth Dumbledore",
+      house: "Gryffindor",
+      patronus: "goat"
+    }
+
+    member = Member.new(attrs)
+    expect(member.has_role?).to eq(false)
+  end
+
+  it ".has_patronus?" do
+    attrs = {
+      name: "Aberforth Dumbledore",
+      house: "Gryffindor",
+      role: "Owner, Hog's Head Inn",
+    }
+
+    member = Member.new(attrs)
+    expect(member.has_patronus?).to eq(false)
+  end
 end
